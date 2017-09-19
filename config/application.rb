@@ -1,6 +1,7 @@
 require_relative 'boot'
-
 require 'rails/all'
+Time::DATE_FORMATS.merge!(:default => '%Y/%m/%d %I:%M %p', :ymd => '%Y/%m/%d')
+
 
 # Require the gems listed in Gemfile, including any gems
 # you've limited to :test, :development, or :production.
