@@ -10,6 +10,8 @@ class Event < ApplicationRecord
   has_many :tickets, :dependent => :destroy, :inverse_of  => :event
   has_many :registrations, :dependent => :destroy
   accepts_nested_attributes_for :tickets, :allow_destroy => true, :reject_if => :all_blank
+  has_many :attachments, :class_name => "EventAttachment", :dependent => :destroy
+  accepts_nested_attributes_for :attachments, :allow_destroy => true, :reject_if => :all_blank
 
   validates_presence_of :name, :friendly_id
   validates_uniqueness_of :friendly_id
