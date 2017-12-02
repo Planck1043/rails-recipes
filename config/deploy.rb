@@ -4,7 +4,7 @@ sh "ssh-add"
 lock "~> 3.10.0"
 
 set :application, "rails_recipes"
-set :repo_url, "git@github.com:Planck1043/rails-recipes"
+set :repo_url, "git@github.com:Planck1043/rails-recipes.git"
 
 # Default branch is :master
 # ask :branch, `git rev-parse --abbrev-ref HEAD`.chomp
